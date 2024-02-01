@@ -1,22 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Challenge Decodificador de Texto</title>
 </head>
+
 <body>
     <header class="header"></header>
     <main class="container">
         <section class="container__encoder">
-            <h1>Codificador de texto</h1>
+            <input type="text" class="container__enconder__input">
+            <p><img src="/assets/exclamation-circle.png"> Apenas letras minusculas e sem acento.</p>
+            <div class="container__encoder__buttons">
+                <button type="button" class="encode__button">Criptografar</button>
+                <button type="button" class="decode__button">Descriptografar</button>
+            </div>
         </section>
         <section class="container__decoder">
-
+            <div class="container__decoder__text">
+                <h2 class="container__decoder__text__title">Nenhuma mensagem criptografada ainda.</h2>
+                <p class="container__decoder__text__paragraph">Digite um texto que você deseja criptografar ou
+                    descriptografar.
+                </p>
+                <button type="button" style="display: none;" class="copy__button">Copiar</button>
+            </div>
         </section>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer">
+        Desenvolvido por <a class="footer__link" href="https://github.com/erikbocks">Erik Böck</a>
+    </footer>
     <script src="index.js"></script>
 </body>
+
 </html>
