@@ -12,25 +12,27 @@
     <header class="header"></header>
     <main class="container">
         <section class="container__encoder">
-            <input type="text" class="container__enconder__input">
+            <input type="text" id="userMessage" class="container__enconder__input">
             <p><img src="/assets/exclamation-circle.png"> Apenas letras minusculas e sem acento.</p>
             <div class="container__encoder__buttons">
-                <button type="button" class="encode__button">Criptografar</button>
-                <button type="button" class="decode__button">Descriptografar</button>
+                <button type="button" class="encode__button" onclick=encryptMessage()>
+                    Criptografar
+                <button type="button" class="decode__button" onclick=decryptMessage()>Descriptografar</button>
             </div>
         </section>
         <section class="container__decoder">
             <div class="container__decoder__text">
-                <h2 class="container__decoder__text__title">Nenhuma mensagem criptografada ainda.</h2>
-                <p class="container__decoder__text__paragraph">Digite um texto que você deseja criptografar ou
+                <h2 id="decoderAreaTitle" class="container__decoder__text__title">Nenhuma mensagem criptografada ainda.</h2>
+                <p id="decoderAreaText" class="container__decoder__text__paragraph">Digite um texto que você deseja
+                    criptografar ou
                     descriptografar.
                 </p>
-                <button type="button" style="display: none;" class="copy__button">Copiar</button>
+                <button type="button" class="copy__button" onclick=copyToClipboard()>Copiar</button>
             </div>
         </section>
     </main>
     <footer class="footer">
-        Desenvolvido por <a class="footer__link" href="https://github.com/erikbocks">Erik Böck</a>
+        Desenvolvido por <a class="footer__link" href="https://github.com/erikbocks">Erik Böck</a> no ano de 2024.
     </footer>
     <script src="index.js"></script>
 </body>
