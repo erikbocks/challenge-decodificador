@@ -9,10 +9,12 @@
 </head>
 
 <body>
-    <header class="header"></header>
+    <header class="header">
+       
+    </header>
     <main class="container">
         <section class="container__encoder">
-            <input type="text" id="userMessage" class="container__enconder__input">
+            <textarea type="text" id="userMessage" class="container__enconder__input"></textarea>
             <p><img src="/assets/exclamation-circle.png"> Apenas letras minusculas e sem acento.</p>
             <div class="container__encoder__buttons">
                 <button type="button" class="encode__button" onclick=encryptMessage()>
@@ -27,12 +29,12 @@
                     criptografar ou
                     descriptografar.
                 </p>
-                <button type="button" class="copy__button" onclick=copyToClipboard()>Copiar</button>
             </div>
+            <button type="button" class="copy__button" onclick=copyToClipboard()>Copiar</button>
         </section>
     </main>
     <footer class="footer">
-        Desenvolvido por <a class="footer__link" href="https://github.com/erikbocks">Erik Böck</a> no ano de 2024.
+        <p class="footer__paragraph">Desenvolvido por <a class="footer__link" href="https://github.com/erikbocks">Erik Böck</a> no ano de 2024.</p>
     </footer>
     <script src="index.js"></script>
 </body>

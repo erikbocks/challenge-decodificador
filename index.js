@@ -2,7 +2,6 @@
 let message = "";
 
 function getMessage(id) {
-    console.log(id)
     return document.getElementById(id).value;
 }
 
@@ -19,6 +18,7 @@ function encryptMessage() {
     message = message.replace(/a/g, "ai");
     message = message.replace(/u/g, "ufat");
     message = message.replace(/o/g, "ober");
+
     document.getElementById("decoderAreaTitle").style.display = "none"
     document.getElementById("decoderAreaText").innerHTML = message;
 }
@@ -42,9 +42,9 @@ function decryptMessage() {
 }
 
 function copyToClipboard() {
-    let message = document.getElementById("decoderAreaText").innerHTML;
-    console.log(message)
+    if (message.length == 0) {
+        return
+    }
+    
     navigator.clipboard.writeText(message)
 }
-
-console.log(message)
