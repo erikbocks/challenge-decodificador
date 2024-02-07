@@ -10,31 +10,45 @@
 
 <body>
     <header class="header">
-       
+        <img src="assets/alura-logo.png" alt="logo da plataforma alura">
     </header>
     <main class="container">
-        <section class="container__encoder">
-            <textarea type="text" id="userMessage" class="container__enconder__input"></textarea>
-            <p><img src="/assets/exclamation-circle.png"> Apenas letras minusculas e sem acento.</p>
-            <div class="container__encoder__buttons">
-                <button type="button" class="encode__button" onclick=encryptMessage()>
-                    Criptografar
-                <button type="button" class="decode__button" onclick=decryptMessage()>Descriptografar</button>
-            </div>
+        <section class="encoder__section">
+            <textarea type="text" id="userMessage" class="encoder__input" placeholder="Digite seu texto"
+                maxlength="304"></textarea>
+            <section class="encoder__button__area">
+                <div class="enconder__warning">
+                    <p><img src="/assets/exclamation-circle.png"> Apenas letras minusculas e sem acento.</p>
+                </div>
+                <div class="encoder__buttons">
+                    <button type="button" class="encode__button" onclick=encryptMessage()>
+                        Criptografar
+                    </button>
+
+                    <button type="button" class="decode__button" onclick=decryptMessage()>
+                        Descriptografar
+                    </button>
+                </div>
+            </section>
         </section>
-        <section class="container__decoder">
-            <div class="container__decoder__text">
-                <h2 id="decoderAreaTitle" class="container__decoder__text__title">Nenhuma mensagem criptografada ainda.</h2>
-                <p id="decoderAreaText" class="container__decoder__text__paragraph">Digite um texto que você deseja
-                    criptografar ou
-                    descriptografar.
-                </p>
+        <section class="decoder__section">
+            <div class="decoder__box">
+                <div class="decoder__warning" id="noContentWarning">
+                    <img src="assets/project_image.svg" alt="imagem ilustrativa de pessoa com uma lupa olhando para um diamante" id="warningImage" class="warning__image">
+                    <h1 id="decoderAreaTitle" class="decoder__title">Nenhuma mensagem ainda.
+                    </h1>
+                    <p id="decoderAreaText" class="decoder__paragraph">Digite um texto que você deseja criptografar ou
+                        descriptografar.
+                    </p>
+                </div>
+                <p id="processedMessage" class="processed__message"></p>
+                <button id="copyButton" type="button" class="copy__button" onclick=copyToClipboard()>Copiar</button>
             </div>
-            <button type="button" class="copy__button" onclick=copyToClipboard()>Copiar</button>
         </section>
     </main>
     <footer class="footer">
-        <p class="footer__paragraph">Desenvolvido por <a class="footer__link" href="https://github.com/erikbocks">Erik Böck</a> no ano de 2024.</p>
+        <p class="footer__paragraph">Desenvolvido por <a class="footer__link" href="https://github.com/erikbocks">Erik
+                Böck<a> no ano de 2024.</p>
     </footer>
     <script src="index.js"></script>
 </body>

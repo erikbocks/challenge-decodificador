@@ -1,5 +1,6 @@
 
 let message = "";
+let textArea = document.getElementById("processedMessage");
 
 function getMessage(id) {
     return document.getElementById(id).value;
@@ -19,15 +20,17 @@ function encryptMessage() {
     message = message.replace(/u/g, "ufat");
     message = message.replace(/o/g, "ober");
 
-    document.getElementById("decoderAreaTitle").style.display = "none"
-    document.getElementById("decoderAreaText").innerHTML = message;
+    document.getElementById("noContentWarning").style.display = "none";
+    document.getElementById("copyButton").style.display = "block";
+    textArea.innerHTML = message;
+    textArea.style.display = "flex";
 }
 
 function decryptMessage() {
     message = getMessage("userMessage");
 
     if (!message.match(/[a-z]/g)) {
-        alert("você só pode usar letras minúsculas e sem acento.")
+        alert("você só pode usar letras minúsculas e sem acento.");
         return
     }
 
@@ -37,8 +40,10 @@ function decryptMessage() {
     message = message.replace(/ufat/g, "u");
     message = message.replace(/ober/g, "o");
 
-    document.getElementById("decoderAreaTitle").style.display = "none"
-    document.getElementById("decoderAreaText").innerHTML = message;
+    document.getElementById("noContentWarning").style.display = "none";
+    document.getElementById("copyButton").style.display = "block";
+    textArea.innerHTML = message;
+    textArea.style.display = "flex";    
 }
 
 function copyToClipboard() {
@@ -46,5 +51,9 @@ function copyToClipboard() {
         return
     }
     
-    navigator.clipboard.writeText(message)
+    navigator.clipboard.writeText(message);
+    document.getElementById("copyButton").style.display = "none";
+    document.getElementById("noContentWarning").style.display = "flex";
+    textArea.innerHTML = "";
+    textArea.style.display = "none";
 }
