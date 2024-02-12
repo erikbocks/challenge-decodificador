@@ -16,7 +16,7 @@
     font-family: var(--primary-font);
 }
 
-button:hover{
+button:hover {
     cursor: pointer;
 }
 
@@ -55,11 +55,13 @@ body {
     font-size: 2rem;
     resize: none;
     outline: none;
-    overflow-y: hidden;
+    overflow-y: scroll;
+    scrollbar-color: var(--terciary-color) transparent;
+    scrollbar-width: thin;
     background-color: transparent;
 }
 
-.encoder__button__area{
+.encoder__button__area {
     display: flex;
     width: 95%;
     height: 15%;
@@ -68,29 +70,29 @@ body {
 
 }
 
-.enconder__warning{
+.enconder__warning {
     display: flex;
     width: 100%;
     color: var(--secondary-font-color);
     padding: 0.25rem;
 }
 
-.enconder__warning__text{
+.enconder__warning__text {
     display: flex;
     align-items: center;
     gap: 0.25rem;
     font-size: 0.75rem;
 }
 
-.encoder__buttons{
+.encoder__buttons {
     display: flex;
     justify-content: space-between;
     width: 100%;
     height: 60%;
-    
+
 }
 
-.encode__button{
+.encode__button {
     width: 48%;
     height: 100%;
     border-radius: 24px;
@@ -100,7 +102,7 @@ body {
     border: none
 }
 
-.decode__button{
+.decode__button {
     width: 48%;
     height: 100%;
     border-radius: 24px;
@@ -110,7 +112,7 @@ body {
     border: 1px solid var(--secondary-color);
 }
 
-.decode__button:hover{
+.decode__button:hover {
     background-color: var(--terciary-color);
 }
 
@@ -138,7 +140,7 @@ body {
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
-.decoder__warning{
+.decoder__warning {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -149,29 +151,32 @@ body {
     width: 90%;
 }
 
-.decoder__title{
+.decoder__title {
     width: 80%;
     color: #343A40;
     font-size: 1.5rem;
 }
 
-.decoder__paragraph{
+.decoder__paragraph {
     width: 90%;
     color: #495057;
     font-size: 1rem;
 }
 
-.processed__message{
+.processed__message {
     display: none;
     width: 90%;
     height: 80%;
     font-size: 1.5rem;
     color: var(--secondary-font-color);
     word-break: break-word;
-    text-align: left; 
+    text-align: left;
+    overflow-y: scroll;
+    scrollbar-color: var(--terciary-color) transparent;
+    scrollbar-width: thin;
 }
 
-.copy__button{
+.copy__button {
     display: none;
     width: 85%;
     height: 8%;
@@ -194,7 +199,7 @@ body {
     color: var(--primary-font-color);
 }
 
-.footer__link{
+.footer__link {
     color: var(--footer-link-font-color);
     text-decoration: underline;
 
@@ -207,18 +212,18 @@ body {
         flex-direction: column;
     }
 
-    .encoder__section{
+    .encoder__section {
         width: 90%;
         height: 55%;
         justify-content: space-between;
     }
 
-    .encoder__input{
+    .encoder__input {
         width: 100%;
         height: 65%;
     }
 
-    .encoder__button__area{
+    .encoder__button__area {
         width: 100%;
     }
 
@@ -226,14 +231,14 @@ body {
         width: 100%;
     }
 
-    .decoder__section{
+    .decoder__section {
         display: flex;
         justify-content: center;
         width: 90%;
         height: 30%;
     }
 
-    .decoder__box{
+    .decoder__box {
         height: 90%;
     }
 
@@ -241,61 +246,62 @@ body {
         display: none;
     }
 
-    .processed__message{
+    .processed__message {
         height: 70%;
-        padding: 1%;   
+        padding: 1%;
     }
 
-    .copy__button{
+    .copy__button {
         width: 90%;
         height: 18%;
     }
 }
 
-@media (max-width: 375px){
+@media (max-width: 375px) {
 
-    .header{
-        justify-content: right;
+    .header {
         width: 27vw;
         height: 7vh;
+        align-items: end;
+        justify-content: right;
     }
 
-    .container{
+    .container {
         height: 87vh;
     }
 
-    .encoder__section{
+    .encoder__section {
         height: 60%;
     }
 
-    .encoder__button__area{
+    .encoder__button__area {
         height: 30%;
     }
 
-    .encoder__buttons{
+    .encoder__buttons {
         height: 100%;
         flex-direction: column;
     }
 
-    .encode__button{
-        width: 100%;
-        height: 40%;    
-    }
-
-    .decode__button{
+    .encode__button {
         width: 100%;
         height: 40%;
     }
 
-    .decoder__section{
+    .decode__button {
+        width: 100%;
+        height: 40%;
+    }
+
+    .decoder__section {
         height: 35%;
     }
 
-    .footer{
+    .footer {
         height: 6vh;
     }
 
-    .footer__paragraph{
+    .footer__paragraph {
         font-size: 1rem;
     }
 }
