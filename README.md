@@ -21,7 +21,7 @@ Como usar
 
 Atualmente, o projeto se encontra hospeado no Github Pages, podendo ser encontrado no link abaixo.
 
-* [🔗 Link 🔗](https://google.com)
+* [🔗 Link 🔗](https://erikbocks.github.io/challenge-decodificador/)
 
 Tecnologias
 ===
