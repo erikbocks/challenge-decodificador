@@ -27,8 +27,6 @@ body {
 .header {
     display: flex;
     align-items: end;
-    justify-content: right;
-    width: 9vw;
     height: 11vh;
 }
 
@@ -54,7 +52,7 @@ body {
     border: none;
     color: var(--primary-font-color);
     padding: 2%;
-    font-size: 32px;
+    font-size: 2rem;
     resize: none;
     outline: none;
     overflow-y: hidden;
@@ -71,8 +69,17 @@ body {
 }
 
 .enconder__warning{
-    width: 93%;
+    display: flex;
+    width: 100%;
     color: var(--secondary-font-color);
+    padding: 0.25rem;
+}
+
+.enconder__warning__text{
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.75rem;
 }
 
 .encoder__buttons{
@@ -89,7 +96,7 @@ body {
     border-radius: 24px;
     background-color: var(--secondary-color);
     color: white;
-    font-size: 16px;
+    font-size: 1rem;
     border: none
 }
 
@@ -97,10 +104,14 @@ body {
     width: 48%;
     height: 100%;
     border-radius: 24px;
-    background-color: var(--terciary-color);
+    background-color: transparent;
     color: var(--primary-font-color);
-    font-size: 16px;
+    font-size: 1rem;
     border: 1px solid var(--secondary-color);
+}
+
+.decode__button:hover{
+    background-color: var(--terciary-color);
 }
 
 .decoder__section {
@@ -141,23 +152,23 @@ body {
 .decoder__title{
     width: 80%;
     color: #343A40;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 .decoder__paragraph{
     width: 90%;
     color: #495057;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .processed__message{
     display: none;
     width: 90%;
     height: 80%;
-    font-size: 24px;
+    font-size: 1.5rem;
     color: var(--secondary-font-color);
     word-break: break-word;
-    text-overflow: ellipsis;
+    text-align: left; 
 }
 
 .copy__button{
@@ -167,19 +178,19 @@ body {
     border-radius: 24px;
     border: 1px solid var(--secondary-color);
     background-color: transparent;
-    font-size: 16px;
+    font-size: 1rem;
     color: var(--primary-font-color);
 }
 
 .footer {
-    height: 7vh ;
+    height: 7vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .footer__paragraph {
-    font-size: 18px;
+    font-size: 1.125rem;
     color: var(--primary-font-color);
 }
 
@@ -191,30 +202,20 @@ body {
 
 @media (max-width: 768px) {
 
-    .header{
-        width: 15vw;
-    }
-
     .container {
+        height: 86vh;
         flex-direction: column;
-        background-color: red;
     }
 
     .encoder__section{
         width: 90%;
         height: 55%;
         justify-content: space-between;
-        background-color: cyan;
     }
 
     .encoder__input{
-        background-color: pink;
         width: 100%;
         height: 65%;
-    }
-
-    .decoder__box{
-        height: 100%;
     }
 
     .encoder__button__area{
@@ -226,8 +227,14 @@ body {
     }
 
     .decoder__section{
+        display: flex;
+        justify-content: center;
         width: 90%;
-        height: 20%;
+        height: 30%;
+    }
+
+    .decoder__box{
+        height: 90%;
     }
 
     .warning__image {
@@ -235,7 +242,60 @@ body {
     }
 
     .processed__message{
-        padding: 1%;        
-        background-color: red;
+        height: 70%;
+        padding: 1%;   
+    }
+
+    .copy__button{
+        width: 90%;
+        height: 18%;
+    }
+}
+
+@media (max-width: 375px){
+
+    .header{
+        justify-content: right;
+        width: 27vw;
+        height: 7vh;
+    }
+
+    .container{
+        height: 87vh;
+    }
+
+    .encoder__section{
+        height: 60%;
+    }
+
+    .encoder__button__area{
+        height: 30%;
+    }
+
+    .encoder__buttons{
+        height: 100%;
+        flex-direction: column;
+    }
+
+    .encode__button{
+        width: 100%;
+        height: 40%;    
+    }
+
+    .decode__button{
+        width: 100%;
+        height: 40%;
+    }
+
+    .decoder__section{
+        height: 35%;
+    }
+
+    .footer{
+        height: 6vh;
+    }
+
+    .footer__paragraph{
+        font-size: 1rem;
     }
 }
